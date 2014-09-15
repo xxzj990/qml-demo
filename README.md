@@ -1,3 +1,3 @@
 Content:
 
-1¡¢Pull to refresh
+1. Pull to refresh
