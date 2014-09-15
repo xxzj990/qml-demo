@@ -1,5 +1,8 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
+        <file>ListItem.qml</file>
+        <file>ListHeader.qml</file>
+        <file>images/icon-refresh.png</file>
     </qresource>
 </RCC>
