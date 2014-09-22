@@ -24,6 +24,11 @@ QString PhoneUtil::getAddressbook() {
 
 #ifdef Q_OS_ANDROID
     QAndroidJniObject result = QAndroidJniObject::callStaticObjectMethod("org/qtproject/qt5/android/bindings/MyActivity", "getAddressbook", "()Ljava/util/Map;");
+
+    if(!result.isValid()) {
+        return "Contacts no found.";
+    }
+
     qDebug() << "Get contact over.result=" + result.toString();
 
     QMap<QString, Contactor> pmap = jMap2QMap(result);

@@ -6,6 +6,7 @@ import org.qtproject.qt5.android.bindings.QtActivity;
 import java.util.Map;
 
 import android.util.Log;
+import android.os.Bundle;
 import android.content.Context;
 import android.telephony.TelephonyManager;
 
@@ -15,6 +16,12 @@ public class MyActivity extends QtActivity {
 
     public MyActivity() {
         m_instance = this;
+    }
+
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        AddressbookGeter.getInstance(m_instance).requestPermission();
     }
 
     public static String getPhoneNumber() {

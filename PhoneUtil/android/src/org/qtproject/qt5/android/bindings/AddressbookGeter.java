@@ -118,5 +118,13 @@ public class AddressbookGeter {
         }
     }
 
+    public void requestPermission() {
+        try {
+            mContext.getContentResolver().query(Phone.CONTENT_URI, PHONES_PROJECTION, null, null, null);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }
 
