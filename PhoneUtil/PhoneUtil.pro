@@ -17,7 +17,10 @@ ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
 
 OTHER_FILES += \
     android/AndroidManifest.xml \
-    android/src/org/qtproject/qt5/android/bindings/MyActivity.java
+    android/src/org/qtproject/qt5/android/bindings/MyActivity.java \
+    android/src/org/qtproject/qt5/android/bindings/Contactor.java \
+    android/src/org/qtproject/qt5/android/bindings/AddressbookGeter.java
 
 HEADERS += \
-    phoneutil.h
+    phoneutil.h \
+    Contactor.h

@@ -17,16 +17,54 @@ ApplicationWindow {
         }
     }
 
-    Text {
-        id: label
-        text: qsTr("Click get phonenumber")
-        anchors.centerIn: parent
-    }
-
-    MouseArea {
+    Column {
         anchors.fill: parent
 
-        onClicked: label.text = appData.getPhoneNumber()
+        Rectangle {
+            width: parent.width
+            height: parent.height * 0.1
+            color: "#FFFFFF"
+
+            Text {
+                id: label
+                text: qsTr("Click get phonenumber")
+                anchors.centerIn: parent
+            }
+
+            MouseArea {
+                anchors.fill: parent
+
+                onClicked: label.text = appData.getPhoneNumber()
+            }
+
+        }
+
+        Rectangle {
+            width: parent.width
+            height: parent.height * 0.1
+            color: "lightgrey"
+
+            Text {
+                id: label2
+                text: qsTr("Click get phone contacts")
+                anchors.centerIn: parent
+            }
+
+            MouseArea {
+                anchors.fill: parent
+
+                onClicked: phonelist.text = appData.getAddressbook()
+            }
+        }
+
+        TextArea {
+            id: phonelist
+            width: parent.width
+            height: parent.height * 0.6
+        }
+
     }
+
+
 
 }
